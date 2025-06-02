@@ -7,7 +7,7 @@
     "start": "npx nodemon index.js",
     "dev": "nodemon index.js"
   },
-  "author": "Kakaribuu (João)",
+  "author": "Trevisan",
   "license": "MIT",
   "dependencies": {
     "dotenv": "^16.5.0",

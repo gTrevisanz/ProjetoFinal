@@ -61,8 +61,20 @@ async function insertCustomers(customers) {
 
 }
 
+// Função para excluir cliente
+async function deleteCustomer(id) {
+  // Estabelecer conexão
+  const client = await connect();
+  // parâmetros que devem ser injetados
+  const sql = "DELETE FROM client WHERE cpf=$1";
+  const values = [id];
+  
+  await client.query(sql, values)
+  }
+
   module.exports = {
     insertCustomers,
     selectCustomers,
-    selectCustomer
+    selectCustomer,
+    deleteCustomer
   }
